@@ -1,0 +1,332 @@
+:root {
+    --header-height: 3.5rem;
+    --first-hue: 250;
+    --sat: 66%;
+    --lig: 75%;
+    --second-hue: 219;
+    --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+    --title-color: hsl(var(--second-hue), 15%, 95%);
+    --text-color: hsl(var(--second-hue), 8%, 75%);
+    --text-color-light: hsl(var(--second-hue), 4%, 55%);
+    --body-color: hsl(var(--second-hue), 48%, 8%);
+    --container-color: hsl(var(--second-hue), 32%, 12%);
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+    --dark-bg: #0B111E;
+    --dark-card: #151C28;
+    --dark-button: #9584E6;
+    --light-bg: #F0F4F8;
+    --light-card: #FFFFFF;
+    --light-button: #A395E9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--body-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    transition: color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.light-mode h1 {
+    color: var(--body-color);
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--light-button);
+    transition: color 0.3s ease;
+}
+
+.light-mode #themeToggle {
+    color: var(--light-button);
+}
+
+#themeToggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+.filter-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.filter-label {
+    margin-bottom: 0.5rem;
+    font-size: var(--small-font-size);
+}
+
+.filter-select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: var(--normal-font-size);
+    background-color: var(--dark-card);
+    color: var(--text-color);
+    border: 1px solid #A395E9;
+    border-radius: 0.5rem;
+}
+
+
+    
+
+
+.light-mode .filter-select {
+    background-color: var(--light-card);
+    color: var(--body-color);
+    border-color:#A395E9;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.certificate {
+    background-color: var(--dark-card);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.light-mode .certificate {
+    background-color: var(--light-card);
+}
+
+.certificate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certificate img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.project-title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.light-mode .project-title {
+    color: var(--body-color);
+}
+
+.project-description {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.light-mode .project-description {
+    color: var(--body-color);
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    font-size: var(--tiny-font-size);
+    background-color: var(--first-color);
+    color: var(--dark-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.light-mode .tech-tag {
+    background-color: var(--light-button);
+    color: var(--light-bg);
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.certificate {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (phones, 576px and up) */
+@media screen and (min-width: 576px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: var(--h1-font-size);
+    }
+
+    .filter-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .filter-label {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .filter-select {
+        width: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    :root {
+        --biggest-font-size: 2.25rem;
+        --h1-font-size: 1.75rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+
+    header {
+        margin-bottom: 3rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 2.5rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .certificate:hover {
+        transform: translateY(-10px) rotate(2deg);
+    }
+
+    .certificate:hover img {
+        transform: scale(1.1);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    :root {
+        --biggest-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates</title>
+    <link rel="stylesheet" href="assets/css/certificate page styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Certificates</h1>
+            <button id="themeToggle" aria-label="Toggle theme">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </header>
+        <main>
+            <div class="filter-container">
+                <label for="category-filter" class="filter-label">Filter by category:</label>
+                <select id="category-filter" class="filter-select">
+                    <option value="all">All</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="design">Design</option>
+                </select>
+            </div>
+            <div class="certificates-grid project-grid">
+                <div class="certificate project-card" data-category="web-development">
+                    <img src="wallpaperflare.com_wallpaper (2).jpg" alt="Web Development Certificate" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Advanced Web Development</h3>
+                        <p class="project-description">Issued by: Codecademy</p>
+                        <p class="project-description">Date: January 2023</p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate project-card" data-category="data-science">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Data Science Certificate" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Data Science Fundamentals</h3>
+                        <p class="project-description">Issued by: Coursera</p>
+                        <p class="project-description">Date: March 2023</p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Statistics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate project-card" data-category="design">
+                    <img src="/placeholder.svg?height=200&width=300" alt="UI/UX Design Certificate" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">UI/UX Design Principles</h3>
+                        <p class="project-description">Issued by: Udacity</p>
+                        <p class="project-description">Date: May 2023</p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate project-card" data-category="web-development">
+                    <img src="/placeholder.svg?height=200&width=300" alt="JavaScript Certificate" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">JavaScript Mastery</h3>
+                        <p class="project-description">Issued by: freeCodeCamp</p>
+                        <p class="project-description">Date: July 2023</p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">ES6+</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+ 
+    <script src="assets/js/certificate page script.js"></script>
+</body>
+</html>
+
