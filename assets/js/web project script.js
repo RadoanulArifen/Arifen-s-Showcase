@@ -1,5 +1,14 @@
 const projects = [
   {
+    title: "Result Checker",
+    description:
+      "A Result Checker is a web-based application that allows users, such as students, to easily access their academic results online. By entering details like their student ID and semester ID, the system retrieves results from a secure database or API and displays them in a user-friendly format. This tool eliminates the hassle of manual result distribution and ensures accuracy, accessibility, and convenience for both students and administrators.",
+    image: "/assets/img/result crecker.png",
+    link: "https://jsgcnlry9rhfowhi.vercel.app/",
+    github: "https://github.com/RadoanulArifen/Result-Checker",
+    technologies: ["HTML", "CSS", "Typescript"],
+  },
+  {
     title: "EduCare",
     description:
       "Educare is an educational website designed to provide quality learning experiences through interactive video lessons, quizzes, live classes, and downloadable resources. With a simple and user-friendly interface, Educare offers a variety of courses and study materials to support school, college, and exam preparation. The platform focuses on making education accessible, engaging, and effective for learners at all levels.",
