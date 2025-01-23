@@ -56,7 +56,7 @@ const projects = [
     image: "/assets/img/SavoryBites.png",
     link: "https://radoanularifen.github.io/SavoryBites/",
     github: "https://github.com/RadoanulArifen/SavoryBites",
-    technologies: ["Svelte", "Fastify", "SQLite"],
+    technologies: ["HTML", "css", "JavaScript"],
   },
 ];
 
