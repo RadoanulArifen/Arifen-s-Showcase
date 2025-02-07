@@ -3,7 +3,7 @@ const projects = [
     title: "Result Checker",
     description:
       "A Result Checker is a web-based application that allows users, such as students, to easily access their academic results online. By entering details like their student ID and semester ID, the system retrieves results from a secure database or API and displays them in a user-friendly format. This tool eliminates the hassle of manual result distribution and ensures accuracy, accessibility, and convenience for both students and administrators.",
-    image: "/assets/img/result crecker.png",
+    image: "./assets/img/result crecker.png",
     link: "https://jsgcnlry9rhfowhi.vercel.app/",
     github: "https://github.com/RadoanulArifen/Result-Checker",
     technologies: ["HTML", "CSS", "Typescript"],
@@ -12,7 +12,7 @@ const projects = [
     title: "EduCare",
     description:
       "Educare is an educational website designed to provide quality learning experiences through interactive video lessons, quizzes, live classes, and downloadable resources. With a simple and user-friendly interface, Educare offers a variety of courses and study materials to support school, college, and exam preparation. The platform focuses on making education accessible, engaging, and effective for learners at all levels.",
-    image: "/assets/img/EduCare.png",
+    image: "./assets/img/EduCare.png",
     link: "https://radoanularifen.github.io/EduCare/",
     github: "https://github.com/RadoanulArifen/EduCare",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -21,7 +21,7 @@ const projects = [
     title: "NexBank",
     description:
       "Nexbank is a comprehensive bank management system designed to streamline and automate banking operations. It provides core functionalities such as account management, transaction processing, loan management, and customer relationship management. With a secure and user-friendly interface, Nexbank ensures efficient financial operations, enhanced customer service, and seamless integration with modern banking needs.",
-    image: "/assets/img/nexbank.jpg",
+    image: "./assets/img/nexbank.jpg",
     link: "https://github.com/RadoanulArifen/NexBank",
     github: "https://github.com/RadoanulArifen/NexBank",
     technologies: ["JAVA"],
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "ControlHub",
     description: "ControlHub is an intuitive admin dashboard designed for efficient management and monitoring of data and operations. It provides real-time analytics, user management, customizable widgets, and a clean interface to streamline decision-making. ControlHub ensures administrators have complete control and visibility over their systems for improved efficiency and productivity.",
-    image: "/assets/img/admin dashboard.png",
+    image: "./assets/img/admin dashboard.png",
     link: "https://radoanularifen.github.io/ControlHub/",
     github: "https://github.com/RadoanulArifen/ControlHub",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -37,7 +37,7 @@ const projects = [
   {
     title: "Foodie",
     description: "Foodie is an intuitive platform designed for food enthusiasts to explore, order, and enjoy their favorite cuisines. It offers a seamless experience with features like restaurant browsing, online food ordering, personalized recommendations, and real-time delivery tracking. Foodie connects users with a variety of dining options, ensuring convenience and satisfaction for every meal.",
-    image: "/assets/img/foodie.png",
+    image: "./assets/img/foodie.png",
     link: "https://radoanularifen.github.io/Foodie/",
     github: "https://github.com/RadoanulArifen/Foodie",
     technologies: ["HTML","CSS","JavaScript","Next.js", "GraphQL", "MongoDB"],
@@ -45,7 +45,7 @@ const projects = [
   {
     title: "EcoHaven",
     description: "EcoHaven is a sustainability-focused platform designed to promote eco-friendly living and environmental awareness. It serves as a hub for resources, tips, and products that support sustainable practices, such as reducing waste, conserving energy, and adopting green technologies. EcoHaven inspires individuals and communities to make environmentally conscious choices for a greener future",
-    image: "/assets/img/Ecohaven.png",
+    image: "./assets/img/Ecohaven.png",
     link: "#",
     github: "https://github.com/RadoanulArifen/EcoHaven",
     technologies: ["Html", "Css", "JavaScript","PHP","MySQL"],
@@ -53,7 +53,7 @@ const projects = [
   {
     title: "SavoryBites",
     description: "SavoryBites is a modern restaurant website designed to showcase delicious cuisines and provide a seamless dining experience. It features an attractive menu display, online reservations, and food ordering options. With user-friendly navigation and mouthwatering visuals, SavoryBites connects food lovers with their favorite dishes and offers an unforgettable culinary journey.",
-    image: "/assets/img/SavoryBites.png",
+    image: "./assets/img/SavoryBites.png",
     link: "https://radoanularifen.github.io/SavoryBites/",
     github: "https://github.com/RadoanulArifen/SavoryBites",
     technologies: ["HTML", "css", "JavaScript"],
