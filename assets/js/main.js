@@ -34,7 +34,6 @@ modalClose.forEach((mc) => {
 
 
 /*=============== Little Modification ===============*/
-
 const form = document.getElementById('ratingForm');
   const swiperWrapper = document.querySelector('.testimonial__container .swiper-wrapper');
 
@@ -91,6 +90,8 @@ const form = document.getElementById('ratingForm');
     `;
     swiperWrapper.appendChild(slide);
   }
+
+
 
 /*=============== Little Modification ===============*/
 
