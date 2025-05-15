@@ -753,6 +753,32 @@ background-color: var(--first-color);
 
 /*=============== CONTACT ===============*/
 
+/*modification*/
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.3rem;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 2rem;
+  color: var(--text-color-light);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: gold;
+}
+
+/*modification*/
 .contact__container{
   row-gap: 3rem;
   padding-bottom: 3rem;
@@ -844,7 +870,15 @@ background-color: var(--first-color);
 .contact__form-tag{
   position: absolute;
   top: -.75rem;
-  left: 1.25rem;
+  left: 1.2rem;
+  font-size: var(--smaller-font-size);
+  padding: .25rem;
+  background-color: var(--body-color);
+  z-index: 10;
+}
+.contact__form-tag_a{
+  position: absolute;
+  top: -.75rem;
   font-size: var(--smaller-font-size);
   padding: .25rem;
   background-color: var(--body-color);

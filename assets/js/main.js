@@ -32,6 +32,68 @@ modalClose.forEach((mc) => {
   });
 });
 
+
+/*=============== Little Modification ===============*/
+
+const form = document.getElementById('ratingForm');
+  const swiperWrapper = document.querySelector('.testimonial__container .swiper-wrapper');
+
+  // Load saved ratings on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedRatings = JSON.parse(localStorage.getItem('ratings')) || [];
+    savedRatings.forEach(addTestimonialCard);
+  });
+
+  // Add form submit listener
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const review = document.getElementById('review').value;
+    const ratingInput = document.querySelector('input[name="rating"]:checked');
+
+    if (!ratingInput) {
+      alert("Please select a rating!");
+      return;
+    }
+
+    const ratingValue = ratingInput.value;
+
+    const newRating = {
+      name,
+      review,
+      rating: ratingValue
+    };
+
+    // Save to localStorage
+    const savedRatings = JSON.parse(localStorage.getItem('ratings')) || [];
+    savedRatings.push(newRating);
+    localStorage.setItem('ratings', JSON.stringify(savedRatings));
+
+    addTestimonialCard(newRating);
+
+    if (typeof swiper !== "undefined") {
+      swiper.update();
+    }
+
+    form.reset();
+  });
+
+  function addTestimonialCard({ name, review, rating }) {
+    const slide = document.createElement('div');
+    slide.classList.add('testimonial__card', 'swiper-slide');
+    slide.innerHTML = `
+      <h3 class="testimonial__name">${name}</h3>
+      <div class="testimonial__stars" style="color: gold; font-size: 1.2rem;">
+        ${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}
+      </div>
+      <p class="testimonial__description">${review}</p>
+    `;
+    swiperWrapper.appendChild(slide);
+  }
+
+/*=============== Little Modification ===============*/
+
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup(".work__container", {
   selectors: {

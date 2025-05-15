@@ -567,32 +567,16 @@
 
             <div class="testimonial__container container swiper">
                 <div class="swiper-wrapper">
-                    <div class="testimonial__card swiper-slide">
+                    <!-- <div class="testimonial__card swiper-slide">
                         <img src="/assets/img/testimonial1.png" alt="" class="testimonial__img">
                         <h3 class="testimonial__name">Jhon Doe</h3>
                         <p class="testimonial__description">
                             A really good job, all aspects of the project were
                             followed step by step and with good results.
                         </p>
-                    </div>
+                    </div> -->
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/img/testimonial2.png" alt="" class="testimonial__img">
-                        <h3 class="testimonial__name">Paula Vusy</h3>
-                        <p class="testimonial__description">
-                            A really good job, all aspects of the project were
-                            followed step by step and with good results.
-                        </p>
-                    </div>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/img/testimonial3.png" alt="" class="testimonial__img">
-                        <h3 class="testimonial__name">Sara Cill</h3>
-                        <p class="testimonial__description">
-                            A really good job, all aspects of the project were
-                            followed step by step and with good results.
-                        </p>
-                    </div>
                 </div>
 
                 <div class="swiper-pagination"></div>
@@ -646,29 +630,44 @@
 
                 </div>
 
-                <div class="contact__content">
-                    <h3 class="contact__title">Write me your project</h3>
-
-                    <form action="" class="contact__form">
+                <!--modification-->
+                <div class="contact__form">
+                    <form id="ratingForm" class="contact__form">
+                        <h3 class="contact__title">Rate My Work</h3>
+                        <!-- Name --> 
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Name</label>
-                            <input type="text" placeholder="Insert Your Name" class="contact__form-input">
+                            <label class="contact__form-tag">Name</label>
+                            <input type="text" id="name" class="contact__form-input" placeholder="Insert your name"
+                                required />
                         </div>
 
+                        <!-- Star Rating -->
                         <div class="contact__form-div">
-                            <label for="" class="contact__form-tag">Mail</label>
-                            <input type="email" placeholder="Insert Your Email" class="contact__form-input">
+                            <label class="contact__form-tag_a">Rating</label>
+                            <div class="stars" style="padding: 1rem 0;">
+                                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                            </div>
                         </div>
 
+                        <!-- Review -->
                         <div class="contact__form-div contact__form-area">
-                            <label for="" class="contact__form-tag">Project</label>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Write about your project"
-                                class="contact__form-input"></textarea>
+                            <label class="contact__form-tag">Review</label>
+                            <textarea id="review" class="contact__form-input" placeholder="Write your review..."
+                                required></textarea>
                         </div>
 
-                        <button class="button">Send Message</button>
+                        <!-- Submit Button -->
+                        <button type="submit" class="button button--flex">
+                            Submit Rating
+                        </button>
                     </form>
                 </div>
+
+                <!--modification-->
             </div>
 
         </section>
@@ -678,7 +677,7 @@
     <footer class="footer">
 
         <div class="footer__container container">
-            
+
 
             <ul class="footer__list">
                 <li>
